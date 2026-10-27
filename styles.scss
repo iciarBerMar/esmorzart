@@ -45,8 +45,6 @@ h2 {
   margin-block: 4rem 1.5rem;
 }
 
-// <p> de categoría/index.html
-
 .intro-ritual {
   padding-block-end: 2.5rem;
   }
@@ -64,7 +62,7 @@ h2 {
   text-decoration: none;
   transition: top 0.15s ease;
 
-//accesibilidad teclado
+//accesibilidad para teclado
   &:focus {
     top: 0;
   }
@@ -105,13 +103,13 @@ h2 {
   }
 
   li + li {
-    border-left: none; // evita el doble borde entre celdas contiguas
+    border-left: none; //quita doble borde en celdas contiguas
   }
 
   li:nth-child(2),
   li:nth-child(3),
   li:nth-child(4) {
-    background-color: var(--color-arena); // El Ritual, El Chivito, El Caballo
+    background-color: var(--color-arena); //El Ritual, El Chivito, El Caballo
   }
 
   a {
@@ -496,6 +494,7 @@ img {
     flex: 0 0 min(40%, 320px);
     min-width: 0;
     border-radius: 12px;
+    overflow: hidden;
   }
 
   &__imagenes {
