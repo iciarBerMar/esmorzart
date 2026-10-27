@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../styles.scss" />
+    <include src="favicon.html"></include>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EsmorzArt - El ritual</title>
+</head>
+<body>
+    <include src="header.html"></include>
+    <main id="main">
+        <h2>El ritual</h2>
+
+        <p class="intro-ritual">El almuerzo valenciano, o <em>esmorzaret</em>, es mucho más que un tentempié a media mañana: es un ritual social con sus propias normas no escritas. Entre las 10 y las 12 del mediodía, bares y tabernas de toda la Comunidad Valenciana se llenan de gente que comparte mesa, conversación y algunos de los platos más contundentes de la gastronomía local.</p>
+
+
+        <section class="ritual" aria-label="El ritual del almuerzo valenciano">
+            <article class="paso paso--gasto">
+            <button type="button" class="paso__imagen" aria-expanded="false" aria-controls="desc-gasto">
+                    <img src="/img_web/gasto_sinfondo.png" alt="Ilustración pixel art de los aperitivos del gasto" />
+            </button>
+                    <h3>1. El gasto</h3>
+                <div class="paso__descripcion" id="desc-gasto" hidden>
+                    <p>El gasto es el acompañamiento inicial imprescindible que se sirve nada más sentarse a la mesa, compuesto por aceitunas, cacahuetes
+                        (<em lang="ca-valenciano">cacaus</em>), altramuces (<em lang="ca-valenciano">tramussos</em>) y encurtidos.
+                    
+                    <p>Tiene su origen en la cultura agrícola: los <em lang="ca-valenciano">llauradors</em> (labradores) de antaño necesitaban un tentempié rápido mientras esperaban el bocata,
+                        algo barato, compartido y que ayudara a abrir el apetito. Con el tiempo, esta costumbre se convirtió en parte esencial del almuerzo,
+                        hasta el punto de que hoy es impensable sentarse a almorzar sin que aparezca el gasto en la mesa.
+                    </p>
+                    
+                    <p>Un detalle importante: el gasto
+                        siempre es gratis, forma parte del almuerzo, no se paga aparte.
+                    </p>
+                </div>
+             </article>
+
+            <article class="paso paso--entrepa">
+            <button type="button" class="paso__imagen" aria-expanded="false" aria-controls="desc-entrepa">
+                    <img src="/img_web/entrepa_sinfondo.png" alt="Ilustración pixel art genérica de un bocadillo" />
+            </button>
+                    <h3>2. El <em lang="ca-valenciano">entrepà</em></h3>
+                <div class="paso__descripcion" id="desc-entrepa" hidden>
+                    <p>El <em lang="ca-valenciano">entrepà</em> (bocadillo en valenciano) es el plato principal del almuerzo. </p>
+                    <p>Ese el plato principal, si en cual, no existiría este ritual.</p>
+                    <p>El tipo de pan utilizado en esta elaboración también tiene "miga", ya que según el tipo de relleno, la humedad del mismo o las salsas, se escoge por su consistencia un tipo de pan u otro.</p>
+                    <p>Entre los más populares en "La Terreta" destacan el <em>almussafes</em>, el <em>blanc i negre</em>,
+                        la brascada, el chivito, el de <em lang="ca-valenciano">figatells</em>, y el rey indiscutible: el de carne de caballo con ajos tiernos.
+                    </p>
+                </div>
+            </article>
+
+            <article class="paso paso--cremaet">
+            <button type="button" class="paso__imagen" aria-expanded="false" aria-controls="desc-cremaet">
+                    <img src="/img_web/cremaet_sinfondo.png" alt="Ilustración pixel art del cremaet" />
+            </button>
+                    <h3>3. El <em lang="ca-valenciano">cremaet</em></h3>
+                <div class="paso__descripcion" id="desc-cremaet" hidden>
+                    <p>El <em lang="ca-valenciano">cremaet</em> es el café que cierra el almuerzo valenciano: un café con licor quemado, servido por capas. Abajo, el licor flambeado con
+                        azúcar, infusionado en caliente con corteza de limón y canela en rama; encima, el café solo recién hecho, vertido despacio para que
+                        flote; y coronándolo, la espuma del café.
+                    </p>
+                    <p>Existen dos historias sobre su origen: una lo sitúa en Vila-real, ligada a los retornados de Cuba de finales del XIX, que habrían traído
+                        la costumbre del café con ron quemado. Otra lo vincula a la vieja tradición local del aguardiente, con la costumbre campesina de "matar"
+                        el café quemándolo para suavizarlo. Probablemente ambas se den la mano.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section id="listado-entrepans">
+
+                    <h2>Los <em lang="ca-valenciano">entrepans</em></h2>
+            <ul class="listado-entrepans">
+
+                <li class="entrepa-item">
+                <button type="button" class="entrepa-item__imagen" aria-pressed="false" aria-label="Ver foto real del chivito">
+                    <img src="/img_web/chivito_pixelart.jpg" alt="Ilustración pixel art del bocadillo de chivito" class="img-pixelart" />
+                    <img src="/img_web/chivito_destacada.png" alt="" class="img-real" />
+                </button>
+                    <h3><a href="/det1">Chivito</a></h3>
+                    <p>Bocadillo contundente de carne llegado desde Uruguay, que se ha hecho un clásico de los almuerzos valencianos: carne, bacon,
+                    queso y a veces huevo, todo en una sola pieza.</p>
+                </li>
+
+                <li class="entrepa-item">
+                <button type="button" class="entrepa-item__imagen" aria-pressed="false" aria-label="Ver foto real del bocadillo de carne de caballo">
+                <img src="/img_web/carne_caballo_pixelart.jpg" alt="Ilustración pixel art del bocadillo de carne de caballo con ajos tiernos" class="img-pixelart" />
+                <img src="/img_web/Carnecaballo_destacada.png" alt="" class="img-real" />
+            </button>
+            <h3><a href="/det2">El caballo</a></h3>
+            <p>Un clásico muy valenciano: carne de caballo a la plancha con ajos tiernos y ajoaceite, nacido como alternativa cuando la crisis
+                de las vacas locas golpeó el consumo de ternera.</p>
+        </li>
+        <li class="entrepa-item">
+            <button type="button" class="entrepa-item__imagen" aria-pressed="false" aria-label="Ver foto real del almussafes">
+                <img src="/img_web/almussafes_pixelart.jpg" alt="Ilustración pixel art del bocadillo almussafes" class="img-pixelart" />
+                <img src="/img_web/almussafes_destacada.png" alt="" class="img-real" />
+            </button>
+            <h3>Almussafes</h3>
+            <p>Sobrasada, cebolla pochada y queso fundido en un bocadillo que toma su nombre del municipio valenciano de Almussafes.</p>
+        </li>
+        <li class="entrepa-item">
+            <button type="button" class="entrepa-item__imagen" aria-pressed="false" aria-label="Ver foto real del blanc i negre">
+                <img src="/img_web/blanc_i_negre_pixelart.jpg" alt="Ilustración pixel art del bocadillo blanc i negre" class="img-pixelart" />
+                <img src="/img_web/blancinegre_destacada.png" alt="" class="img-real" />
+            </button>
+            <h3>Blanc i negre</h3>
+            <p>«Blanco y negro»: butifarra blanca y morcilla negra, dos embutidos frescos que se cocinan a la plancha o a la sartén — un bocadillo que se sirve caliente, y,
+                que algunos suben de nivel con una loncha de queso fundido por encima.</p>
+        </li>
+        <li class="entrepa-item">
+            <button type="button" class="entrepa-item__imagen" aria-pressed="false" aria-label="Ver foto real de la brascada">
+                <img src="/img_web/brascada_pixelart.jpg" alt="Ilustración pixel art del bocadillo brascada" class="img-pixelart" />
+                <img src="/img_web/brascada_destacada.png" alt="" class="img-real" />
+            </button>
+            <h3>Brascada</h3>
+            <p>Filetes de ternera a la plancha con jamón serrano y cebolla pochada, un clásico sencillo y resultón del esmorzaret valenciano.</p>
+        </li>
+        <li class="entrepa-item">
+            <button type="button" class="entrepa-item__imagen" aria-pressed="false" aria-label="Ver foto real de los figatells">
+                <img src="/img_web/figatells_pixelart.jpg" alt="Ilustración pixel art del bocadillo de figatells" class="img-pixelart" />
+                <img src="/img_web/figatells_destacada.png" alt="" class="img-real" />
+            </button>
+            <h3>Figatells</h3>
+            <p>Embutido artesanal de cerdo e hígado, envuelto en redaño y asado a la plancha; típico de la comarca de la Safor, especialmente
+                de Gandia.</p>
+        </li>
+    </ul>
+</section>
+    </main>
+
+    <include src="footer.html"></include>
+    <script type="module" src="../app.js"></script>
+</body>
+</html>

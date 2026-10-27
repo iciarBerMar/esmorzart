@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="./styles.css" />
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.scss" />
+    <include src="favicon.html"></include>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EsmorzArt - Inicio</title>
   </head>
-  <body>
-    <h1>Hello UOC - Despliegue continuo</h1>
-    <include src="saludo.html"></include>
+  <body class="portada">
+    <include src="header.html"></include>
+    <main id="main" class="portada-hero">
+      <img src="/img_web/arteDeEsmorzar_high.png" alt="EsmorzArt" class="logo-portada" />
+    <section>
+      <div class="hero-descripcion">
+        <h2>¿QUÉ ES EL <em lang="ca-valenciano">ESMORZAR</em>?</h2>
+      </div>
+
+      <div class="hero-cta">
+        <a href="/categoria" class="boton">Descubre el ritual completo</a>
+      </div>
+</section>
+    </main>
+    <include src="footer.html"></include>
     <script type="module" src="./app.js"></script>
   </body>
 </html>
