@@ -1,0 +1,641 @@
+:root {
+  --color-crema: #F5EFE6;
+  --color-arena: #E8D9C3;
+  --color-trigo: #CBAE8C;
+  --color-terracota: #A97C56;
+  --color-cafe: #7A4A32;
+
+  --texto-oscuro: #2b2622;
+  --texto-claro: #fdfaf4;
+  --texto-cafe: #7A4A32;
+}
+
+body {
+    height: 100vh;
+    color: #1f1f1f;
+    background: var(--color-crema);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    user-select: none;
+    margin: 0;
+}
+
+main {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  box-sizing: border-box;
+}
+
+h1,
+h3,
+nav {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+  color: var(--texto-cafe);
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--texto-cafe);
+  text-transform: uppercase;
+  text-align: center;
+  margin-block: 4rem 1.5rem;
+}
+
+// <p> de categoría/index.html
+
+.intro-ritual {
+  padding-block-end: 2.5rem;
+  }
+
+//header
+
+.saltar-contenido {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: var(--color-cafe);
+  color: var(--texto-claro);
+  padding: 0.75rem 1.5rem;
+  z-index: 100;
+  text-decoration: none;
+  transition: top 0.15s ease;
+
+//accesibilidad teclado
+  &:focus {
+    top: 0;
+  }
+}
+
+.logo-header img {
+  display: block;
+  height: 2.5rem;
+  width: auto;
+}
+
+.site-header {
+  .logo-header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  
+}
+
+.nav-principal {
+  border-top: 1px solid var(--color-cafe);
+  border-bottom: 1px solid var(--color-cafe);
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    border-left: 1px solid var(--color-cafe);
+    border-right: 1px solid var(--color-cafe);
+    padding: 1rem 1.75rem;
+  }
+
+  li + li {
+    border-left: none; // evita el doble borde entre celdas contiguas
+  }
+
+  li:nth-child(2),
+  li:nth-child(3),
+  li:nth-child(4) {
+    background-color: var(--color-arena); // El Ritual, El Chivito, El Caballo
+  }
+
+  a {
+    color: var(--color-cafe);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    font-size: 1rem;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 641px) { //elimina la línea tras el header
+  .nav-hueco {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-principal ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1px;
+  padding: 0;
+  background-color: var(--color-cafe);
+  }
+
+  .nav-principal li {
+  background-color: var(--color-crema);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  }
+
+    .nav-hueco {
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    }
+
+  //Inicio
+
+  .nav-principal li:nth-child(1) { grid-column: 1; grid-row: 1; } 
+
+  //El Ritual
+
+  .nav-principal li:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;} 
+
+   //Chivito
+
+  .nav-principal li:nth-child(3) { grid-column: 1; grid-row: 2; }
+
+  //Caballo
+
+  .nav-principal li:nth-child(4) { grid-column: 3; grid-row: 2; } 
+
+  //Fuentes
+
+  .nav-principal li:nth-child(5) { grid-column: 3; grid-row: 1; } 
+  .nav-hueco { grid-column: 2; grid-row: 2; }
+}
+
+//portada
+
+body.portada main {
+  max-width: none;
+  padding-inline: 0;
+}
+
+.logo-portada {
+  display: block;
+  width: min(90%, 500px);
+  height: auto;
+  margin: 0 auto;
+}
+
+.portada-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgba(245, 239, 230, 0.6), rgba(245, 239, 230, 0.6)),
+    url('/img_web/fondo_portada_hd.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 1.5rem;
+  color: var(--color-cafe);
+}
+
+.hero-descripcion {
+  margin-block-start: 1.5rem;
+}
+
+.portada-hero h1,
+.hero-descripcion,
+.hero-cta {
+  text-align: center;
+}
+
+.hero-cta {
+  margin-block-start: 2rem;
+  .boton{
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .boton {
+    display: inline-block;
+    margin-block-start: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-cafe);
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+
+    &:hover,
+    &:focus-visible
+    &:active {
+      background-color: var(--color-trigo);
+      color: var(--color-cafe)
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--texto-claro);
+      outline-offset: 2px;
+    }
+  }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+//El ritual
+
+.ritual {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-block: 2rem;
+}
+
+.paso {
+  flex: 1 1 240px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+  border-radius: 12px;
+
+  &__descripcion {
+    text-align: left;
+    margin-block-start: 1rem;
+
+    p {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+  }
+
+  .paso__descripcion:not([hidden]) {
+  min-height: 27rem;
+  }
+
+  &__imagen {
+    display: block;
+    width: 100%;
+    max-width: 160px;
+    aspect-ratio: 1;
+    margin-inline: auto;
+    margin-block-end: 1rem;
+    border: none;
+    background-color: transparent;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      transform: scale(1.04);
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--color-cafe);
+      outline-offset: 2px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  &__descripcion {
+    text-align: left;
+    margin-block-start: 1rem;
+  }
+
+  &--gasto {
+    background-color: #fff;
+    color: var(--texto-cafe);
+  }
+
+  &--entrepa {
+    background-color: var(--color-trigo);
+    color: var(--texto-oscuro);
+  }
+
+  &--cremaet {
+    background-color: var(--color-cafe);
+    color: var(--texto-claro);
+
+    &::after { color: var(--texto-claro); }
+  }
+}
+
+@media (max-width: 640px) {
+  .ritual {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .paso {
+    flex: 0 1 auto;
+  }
+}
+
+//listado bocadillos
+
+.listado-entrepans {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-block: 2rem;
+  max-width: 950px;
+  margin-inline: auto;
+  font-family: 'Courier New', Courier, monospace;
+
+  li {
+    display: grid;
+    grid-template-columns: clamp(170px, 26%, 260px) 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 1.5rem;
+    row-gap: 0.5rem;
+
+    .entrepa-item__imagen {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
+
+    h3 {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    p {
+      grid-column: 2;
+      grid-row: 2;
+    }
+  }
+
+  h3 {
+    margin: 0;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible { text-decoration: underline; }
+    }
+  }
+}
+
+.entrepa-item__imagen {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 0.75rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    inset: 0.75rem;
+    width: calc(100% - 1.5rem);
+    height: calc(100% - 1.5rem);
+    object-fit: contain;
+    transition: opacity 0.15s ease;
+  }
+
+  .img-real { opacity: 0; }
+
+  &:hover,
+  &:focus-visible,
+  &.is-revealed {
+    .img-pixelart { opacity: 0; }
+    .img-real { opacity: 1; }
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--color-cafe);
+    outline-offset: 2px;
+  }
+}
+
+@media (max-width: 640px) {
+  #listado-entrepans h2 {
+    text-align: center;
+  }
+
+  .listado-entrepans li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .entrepa-item__imagen {
+      width: 100%;
+      max-width: 180px;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    p {
+      text-align: left;
+      width: 100%;
+    }
+  }
+}
+
+//El chivito
+
+.detalle {
+  h2 {
+    text-align: left;
+    margin-block: 3rem 1rem;
+  }
+}
+
+.banner-proceso {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 3rem auto;
+}
+
+.seccion-detalle {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-block: 4rem;
+
+  &__imagen {
+    flex: 0 0 min(40%, 320px);
+    min-width: 0;
+    border-radius: 12px;
+  }
+
+  &__imagenes {
+    flex: 0 0 min(40%, 320px);
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  &__texto {
+    flex: 1;
+    min-width: 0;
+
+    h2 {
+      margin-block-start: 0;
+    }
+  }
+
+  &--invertida {
+    flex-direction: row-reverse;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .seccion-detalle,
+  .seccion-detalle--invertida {
+    flex-direction: column;
+
+    &__imagen,
+    &__imagenes {
+      flex: none;
+      width: 100%;
+    }
+  }
+}
+
+.video-embed {
+  background-color: var(--color-trigo);
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 4rem auto;
+
+  &__ratio {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+}
+
+
+//links y fuentes
+
+.intro-links {
+  margin-block-start: 3rem;
+  margin-block-end: 4rem;
+}
+
+.fuentes-texto,
+.fuentes-video,
+.aviso-ia {
+  margin-block: 6rem;
+
+  article {
+    margin-block: 2.5rem;
+
+    h3 {
+      margin-block-end: 0.5rem;
+    }
+  }
+
+  ul {
+    margin-block: 0.5rem;
+    padding-inline-start: 1.5rem;
+  }
+
+  li {
+    margin-block: 0.4rem;
+  }
+
+  a {
+    color: var(--texto-cafe);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-terracota);
+    }
+  }
+}
+
+
+
+//footer
+
+  footer {
+    font-family: 'Courier New', Courier, monospace;
+    border-top: 1px solid var(--color-cafe);
+    border-bottom: 1px solid var(--color-cafe);
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+
+    .footer-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-block-end: 0.75rem;
+      max-width: 600px;
+      margin: 0 auto 0.75rem;
+    }
+
+    p {
+      margin: 0.4rem 0;
+      color: var(--color-cafe);
+    }
+
+    a {
+      color: var(--color-cafe);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: bold;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+      }
+    }
+}
+  
