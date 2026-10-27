@@ -1,5 +1,6 @@
 import GLightbox from 'glightbox';
 import 'glightbox/dist/css/glightbox.css';
+
 document.querySelectorAll('a.glightbox').forEach((enlace) => {
   const imagen = enlace.querySelector('img');
   if (imagen) {
@@ -8,15 +9,6 @@ document.querySelectorAll('a.glightbox').forEach((enlace) => {
 });
 
 const lightbox = GLightbox();
-
-
-//active en los links del menú principal
-
-document.querySelectorAll('.nav-principal a').forEach((enlace) => {
-  if (enlace.pathname === location.pathname) {
-    enlace.setAttribute('aria-current', 'page');
-  }
-});
 
 //ritual pasos
 
