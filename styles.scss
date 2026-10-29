@@ -152,12 +152,6 @@ h2 {
   text-align: center;
   }
 
-    .nav-hueco {
-    display: block;
-    grid-column: 2;
-    grid-row: 2;
-    }
-
   //Inicio
 
   .nav-principal li:nth-child(1) { grid-column: 1; grid-row: 1; } 
@@ -224,9 +218,6 @@ body.portada main {
 
 .hero-cta {
   margin-block-start: 2rem;
-  .boton{
-    font-family: 'Courier New', Courier, monospace;
-  }
 
   .boton {
     display: inline-block;
@@ -240,10 +231,10 @@ body.portada main {
     transition: background-color 0.15s ease, color 0.15s ease;
 
     &:hover,
-    &:focus-visible
+    &:focus-visible,
     &:active {
       background-color: var(--color-trigo);
-      color: var(--color-cafe)
+      color: var(--color-cafe);
     }
 
     &:focus-visible {
@@ -277,17 +268,17 @@ img {
   position: relative;
   border-radius: 12px;
 
-  &__descripcion {
-    text-align: left;
-    margin-block-start: 1rem;
+    &__descripcion {
+      text-align: left;
+      margin-block-start: 1rem;
 
     p {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
-  }
 
-  .paso__descripcion:not([hidden]) {
-  min-height: 27rem;
+    &:not([hidden]) {
+      min-height: 27rem;
+    }
   }
 
   &__imagen {
@@ -319,11 +310,6 @@ img {
       object-fit: contain;
       display: block;
     }
-  }
-
-  &__descripcion {
-    text-align: left;
-    margin-block-start: 1rem;
   }
 
   &--gasto {
@@ -471,6 +457,10 @@ img {
 //El chivito
 
 .detalle {
+  h1 {
+    margin-block-start: 3rem;
+  }
+
   h2 {
     text-align: left;
     margin-block: 3rem 1rem;
@@ -525,8 +515,8 @@ img {
 
 
 @media (max-width: 640px) {
-  .seccion-detalle,
-  .seccion-detalle--invertida {
+
+  .seccion-detalle {
     flex-direction: column;
 
     &__imagen,
@@ -608,13 +598,12 @@ img {
     font-family: 'Courier New', Courier, monospace;
     border-top: 1px solid var(--color-cafe);
     border-bottom: 1px solid var(--color-cafe);
-    padding: 0.75rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     text-align: center;
 
     .footer-nav {
       display: flex;
       justify-content: space-between;
-      margin-block-end: 0.75rem;
       max-width: 600px;
       margin: 0 auto 0.75rem;
     }

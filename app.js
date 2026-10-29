@@ -1,3 +1,6 @@
+
+//imagenes det1 y det2
+
 import GLightbox from 'glightbox';
 import 'glightbox/dist/css/glightbox.css';
 
