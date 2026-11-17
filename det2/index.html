@@ -12,17 +12,24 @@
     <main id="main" class="detalle">
   <h1>EL CABALLO</h1>
 
-  <img
-    src="/img_web/elcaballo_pasos_completo.jpg"
-    alt="Ilustración en pixelart del montaje del bocadillo de carne de caballo, paso a paso."
-    class="banner-proceso"
-  />
+  <picture>
+    <source media="(min-width: 641px)" srcset="/img_web/elcaballo_pasos_completo.webp" />
+    <img
+      src="/img_web/elcaballo_pasos_mobile.webp"
+      alt="Ilustración en pixelart del montaje del bocadillo de carne de caballo, paso a paso."
+      class="banner-proceso"
+    />
+  </picture>
 
   <section class="seccion-detalle">
 
     <a href="#" class="glightbox seccion-detalle__imagen">
       <img
-        src="/img_web/Carnecaballo_confondo.jpg"
+        src="/img_web/Carnecaballo_confondo.webp"
+        srcset="/img_web/Carnecaballo_confondo-320.webp 320w,
+                /img_web/Carnecaballo_confondo-480.webp 480w,
+                /img_web/Carnecaballo_confondo.webp 650w"
+        sizes="(max-width: 640px) calc(100vw - 3rem), 320px"
         alt="Bocadillo de carne de caballo con ajos tiernos"/>
     </a>
 
@@ -41,7 +48,11 @@
 
     <a href="#" class="glightbox seccion-detalle__imagen">
       <img
-        src="/img_web/Carnecaballo_01.jpg"
+        src="/img_web/Carnecaballo_01.webp"
+        srcset="/img_web/Carnecaballo_01-320.webp 320w,
+                /img_web/Carnecaballo_01-480.webp 480w,
+                /img_web/Carnecaballo_01.webp 650w"
+        sizes="(max-width: 640px) calc(100vw - 3rem), 320px"
         alt="Bocadillo de carne de caballo partido por la mitad"/>
     </a>
 
@@ -63,15 +74,27 @@
     <div class="seccion-detalle__imagenes">
 
       <a href="#" class="glightbox seccion-detalle__imagen">
-        <img src="/img_web/Carnecaballo_02.jpg" alt="Ajos tiernos cocinándose a la plancha" />
+        <img
+          src="/img_web/Carnecaballo_02.webp"
+          srcset="/img_web/Carnecaballo_02-320.webp 320w,
+                  /img_web/Carnecaballo_02-480.webp 480w,
+                  /img_web/Carnecaballo_02.webp 650w"
+          sizes="(max-width: 640px) calc(100vw - 3rem), 320px"
+          alt="Ajos tiernos cocinándose a la plancha" />
       </a>
 
       <a href="#" class="glightbox seccion-detalle__imagen">
-      <img src="/img_web/Carnecaballo_03.jpg" alt="Filetes de carne de caballo cocinándose a la plancha" />
+      <img
+        src="/img_web/Carnecaballo_03.webp"
+        srcset="/img_web/Carnecaballo_03-320.webp 320w,
+                /img_web/Carnecaballo_03-480.webp 480w,
+                /img_web/Carnecaballo_03.webp 650w"
+        sizes="(max-width: 640px) calc(100vw - 3rem), 320px"
+        alt="Filetes de carne de caballo cocinándose a la plancha" />
       </a>
 
     </div>
-    
+
     <div class="seccion-detalle__texto">
       <h2>Preparación</h2>
       <p>Para prepararlo en casa, los ajos tiernos se cocinan primero con un chorrito de aceite de oliva virgen extra y una pizca de sal,
@@ -98,5 +121,5 @@
     <include src="footer.html"></include>
     <script type="module" src="../app.js"></script>
   </body>
-  
+
 </html>

@@ -12,17 +12,24 @@
     <main id="main" class="detalle">
       <h1>EL CHIVITO</h1>
 
-      <img
-      src="/img_web/chivito_banner_completo.jpg"
-      alt="Ilustración en pixelart del montaje del chivito, paso a paso."
-      class="banner-proceso"/>
+      <picture>
+        <source media="(min-width: 641px)" srcset="/img_web/chivito_banner_completo.webp" />
+        <img
+          src="/img_web/chivito_banner_mobile.webp"
+          alt="Ilustración en pixelart del montaje del chivito, paso a paso."
+          class="banner-proceso"/>
+      </picture>
 
 
 <section class="seccion-detalle">
-    
+
       <a href="#" class="glightbox seccion-detalle__imagen">
         <img
-          src="/img_web/chivito_confondo.jpg"
+          src="/img_web/chivito_confondo.webp"
+          srcset="/img_web/chivito_confondo-320.webp 320w,
+                  /img_web/chivito_confondo-480.webp 480w,
+                  /img_web/chivito_confondo.webp 650w"
+          sizes="(max-width: 640px) calc(100vw - 3rem), 320px"
           alt="Bocadillo de chivito"/>
       </a>
 
@@ -40,16 +47,20 @@
 
     <a href="#" class="glightbox seccion-detalle__imagen">
       <img
-        src="/img_web/chivito_01.jpg"
+        src="/img_web/chivito_01.webp"
+        srcset="/img_web/chivito_01-320.webp 320w,
+                /img_web/chivito_01-480.webp 480w,
+                /img_web/chivito_01.webp 650w"
+        sizes="(max-width: 640px) calc(100vw - 3rem), 320px"
         alt="Bocadillo de chivito cortado por la mitad, con la yema del huevo derramándose"/>
     </a>
 
 
     <div class="seccion-detalle__texto">
       <h2>Llegada a Valencia</h2>
-      <p>El chivito uruguayo llegó a Valencia en la segunda mitad del siglo XX. 
-        Un inmigrante de Uruguay lo presentó a sus amigos, quienes se deleitaron con su sabor. 
-        Rápidamente, varios bares en Valencia comenzaron a incluir el chivito en sus cartas, 
+      <p>El chivito uruguayo llegó a Valencia en la segunda mitad del siglo XX.
+        Un inmigrante de Uruguay lo presentó a sus amigos, quienes se deleitaron con su sabor.
+        Rápidamente, varios bares en Valencia comenzaron a incluir el chivito en sus cartas,
         incorporando ingredientes locales y añadiéndole un toque mediterráneo.
       </p>
     </div>
@@ -59,14 +70,26 @@
     <div class="seccion-detalle__imagenes">
 
       <a href="#" class="glightbox seccion-detalle__imagen">
-       <img src="/img_web/chivito_02.jpg" alt="Lonchas de bacon y filetes de carne haciéndose a la plancha" />
+       <img
+         src="/img_web/chivito_02.webp"
+         srcset="/img_web/chivito_02-320.webp 320w,
+                 /img_web/chivito_02-480.webp 480w,
+                 /img_web/chivito_02.webp 650w"
+         sizes="(max-width: 640px) calc(100vw - 3rem), 320px"
+         alt="Lonchas de bacon y filetes de carne haciéndose a la plancha" />
       </a>
       <a href="#" class="glightbox seccion-detalle__imagen">
-      <img src="/img_web/chivito_03.jpg" alt="Huevo friéndose en la plancha" />
+      <img
+        src="/img_web/chivito_03.webp"
+        srcset="/img_web/chivito_03-320.webp 320w,
+                /img_web/chivito_03-480.webp 480w,
+                /img_web/chivito_03.webp 650w"
+        sizes="(max-width: 640px) calc(100vw - 3rem), 320px"
+        alt="Huevo friéndose en la plancha" />
       </a>
 
     </div>
-    
+
     <div class="seccion-detalle__texto">
       <h2>Preparación</h2>
       <p>La preparación del chivito valenciano sigue un proceso sencillo pero con su técnica. Los filetes de
@@ -97,5 +120,5 @@
     <include src="footer.html"></include>
     <script type="module" src="../app.js"></script>
   </body>
-  
+
 </html>

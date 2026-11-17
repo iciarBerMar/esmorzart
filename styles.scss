@@ -35,6 +35,12 @@ nav {
 h1 {
   color: var(--texto-cafe);
   text-align: center;
+  animation: entrada-titulo 0.5s ease-out;
+}
+
+@keyframes entrada-titulo {
+  0%   { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 h2 {
@@ -198,7 +204,7 @@ body.portada main {
   justify-content: center;
   background-image:
     linear-gradient(rgba(245, 239, 230, 0.6), rgba(245, 239, 230, 0.6)),
-    url('/img_web/fondo_portada_hd.png');
+    url('/img_web/fondo_portada_hd.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -243,6 +249,10 @@ body.portada main {
   .vapor__linea {
     animation: none;
     opacity: 0.6;
+  }
+
+  h1 {
+    animation: none;
   }
 }
 
@@ -530,6 +540,21 @@ img {
     min-width: 0;
     border-radius: 12px;
     overflow: hidden;
+    display: block;
+
+    img {
+      transition: transform 0.25s ease;
+    }
+
+    &:hover img,
+    &:focus-visible img {
+      transform: scale(1.06);
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--color-cafe);
+      outline-offset: 2px;
+    }
   }
 
   &__imagenes {
